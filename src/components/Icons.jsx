@@ -3,7 +3,7 @@ import windIcon from '../assets/wind.png';
 import humidityIcon from '../assets/humidity.png';
 import visibilityIcon from '../assets/visibility.png';
 import sunriseIcon from '../assets/sunrise.png';
-import sunsetIcon from '../assets/sunset.png';
+import sunsetIcon from '../assets/Sunset.png';
 
 // Icon = template dasar reusable untuk semua icon
 // menerima 3 props: src (gambar), alt (teks), className (animasi)
