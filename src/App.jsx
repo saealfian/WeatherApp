@@ -13,8 +13,6 @@ function App() {
   const [error, setError] = useState('')
 
   const API_KEY = '0f2469fdda2a6106f889ed69e59fe0a9'
-  // https://api.openweathermap.org/data/2.5/weather?lat=${s.lat}&lon=${s.lon}&appid={API_KEY}&units=metric
-  // http://api.openweathermap.org/geo/1.0/direct?q={querry}&limit=5&appid={API_KEY}
 
   useEffect(() => {
   // (city.trim().length >= 3) Input minimal 3 huruf baru cari saran
@@ -30,7 +28,7 @@ function App() {
   // function ini akan mengambil saran berdasarkan input kota dan memperbarui state suggestion.
   const fetchSuggestions = async (query) => {
     try {
-      const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`);
+      const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`);
       response.ok ? setSuggestion(await response.json()) : setSuggestion([]);
     } catch {
       setSuggestion([]);
